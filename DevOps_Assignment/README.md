@@ -1,6 +1,6 @@
 # DevOps_Assignment — Complete Repository Structure and Code
 
-## Information Technology : ITA700 (replace with your roll number)
+## Information Technology : ITA766 
 
 ### Below is a complete, runnable (with credentials and minor environment tweaks) repository layout and all necessary code for:
 
@@ -18,4 +18,4 @@
 
 ### Selenium test script to validate register/login
 
-##### Important: Replace placeholder variables (AWS credentials, Docker Hub creds, SSH host variables, GitHub secrets) before running. Secrets must be stored in GitHub Actions secrets or Jenkins credentials.
+
