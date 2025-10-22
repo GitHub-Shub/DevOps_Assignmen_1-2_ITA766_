@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Login — DevOps App{% endblock %}
+
+{% block content %}
+<section class="card auth-card">
+  <h1 class="card-title">Login</h1>
+
+  <form method="post" class="form-grid">
+    {% csrf_token %}
+    <label>
+      <span>Roll No (username)</span>
+      {{ form.username }}
+    </label>
+
+    <label>
+      <span>Admission No (password)</span>
+      {{ form.password }}
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" class="btn primary">Login</button>
+      <a href="{% url 'register' %}" class="btn ghost">Register</a>
+    </div>
+  </form>
+
+  <p class="muted">Example: username <code>ITA700</code> and password <code>2022PE0000</code></p>
+</section>
+{% endblock %}

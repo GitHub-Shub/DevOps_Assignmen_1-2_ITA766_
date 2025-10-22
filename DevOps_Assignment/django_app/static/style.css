@@ -1,0 +1,111 @@
+/* Basic reset and container */
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --text:#0f172a;
+  --radius:10px;
+  --max-width:900px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{
+  width:94%;
+  max-width:var(--max-width);
+  margin:28px auto;
+}
+
+/* header */
+.site-header{
+  background:transparent;
+  border-bottom:1px solid rgba(15,23,42,0.06);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.brand a{ font-weight:700; text-decoration:none; color:var(--text); font-size:18px }
+.nav a{ margin-left:14px; text-decoration:none; color:var(--text) }
+.inline-form{ display:inline; margin-left:12px }
+
+.site-footer{
+  padding:22px 0;
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+  margin-top:40px;
+}
+
+/* cards */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow: 0 6px 20px rgba(2,6,23,0.04);
+  padding:28px;
+}
+
+.auth-card{ margin:36px auto; max-width:520px; }
+.home-card{ margin:36px auto; max-width:720px; }
+
+.card-title{
+  font-size:28px;
+  margin:0 0 18px 0;
+}
+
+/* form */
+.form-grid label{ display:block; margin-bottom:12px; font-size:14px; color:var(--muted) }
+.form-grid input[type="text"], .form-grid input[type="password"], .form-grid input, .form-grid textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:8px;
+  border:1px solid rgba(15,23,42,0.08);
+  margin-top:6px;
+  font-size:15px;
+  background: #fff;
+}
+
+.form-actions{ margin-top:18px; display:flex; gap:12px; align-items:center }
+
+.btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-weight:600;
+  font-size:14px;
+}
+
+.btn.primary{ background:var(--accent); color:white; }
+.btn.ghost{ background:transparent; color:var(--accent); border:1px solid rgba(37,99,235,0.12) }
+
+.btn.small{ padding:6px 10px; font-size:13px }
+
+/* small text */
+.muted{ color:var(--muted); margin-top:12px; }
+
+/* messages */
+.messages{ margin-bottom:12px }
+.msg{ padding:10px 12px; border-radius:8px; margin-bottom:8px; font-size:14px }
+.msg.error{ background:#ffe6e6; color:#7a1515 }
+.msg.success{ background:#e6fff7; color:#0f5132 }
+
+/* responsiveness */
+@media (max-width:520px){
+  .card{ padding:18px }
+  .card-title{ font-size:22px }
+}

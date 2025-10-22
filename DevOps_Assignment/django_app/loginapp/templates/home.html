@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Home — DevOps App{% endblock %}
+
+{% block content %}
+<section class="card home-card">
+  <h1 class="card-title">Hello {{ username }} — How are you?</h1>
+
+  <div class="card-body">
+    <p>Welcome to your project demo. This page proves you are authenticated using the Postgres <code>login</code> table.</p>
+
+    <div class="actions">
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button class="btn primary">Logout</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

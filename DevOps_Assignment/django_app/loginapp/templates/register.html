@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Register — DevOps App{% endblock %}
+
+{% block content %}
+<section class="card auth-card">
+  <h1 class="card-title">Register</h1>
+
+  <form method="post" class="form-grid">
+    {% csrf_token %}
+    <label>
+      <span>Roll No (username)</span>
+      {{ form.username }}
+    </label>
+
+    <label>
+      <span>Admission No (password)</span>
+      {{ form.password }}
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" class="btn primary">Create account</button>
+      <a href="{% url 'login' %}" class="btn ghost">Back to Login</a>
+    </div>
+  </form>
+
+  <p class="muted">Your entry will be stored in the <code>login</code> table.</p>
+</section>
+{% endblock %}
