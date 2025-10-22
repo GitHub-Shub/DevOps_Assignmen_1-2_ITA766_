@@ -18,4 +18,4 @@
 
 ### Selenium test script to validate register/login
 
-##### Important: Replace placeholder variables (AWS credentials, Docker Hub creds, SSH host variables, GitHub secrets) before running. Secrets must be stored in GitHub Actions secrets or Jenkins credentials.
+
